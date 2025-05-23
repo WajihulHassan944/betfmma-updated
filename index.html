@@ -1135,5 +1135,44 @@ var booked_fea_vars = {"ajax_url":"https:\/\/webdesign-finder.com\/youko-mma\/wp
 <script src="https://maps.googleapis.com/maps/api/js?v=3.25&amp;language=en&amp;libraries=places&amp;key=AIzaSyC0pr5xCHpaTGv12l73IExOHDJisBP2FK4&amp;ver=3.25" id="google-maps-api-v3-js"></script>
 <script src="wp-includes/js/underscore.min.js?ver=1.13.4" id="underscore-js"></script>
 <script src="wp-content/themes/youko/framework-customizations/extensions/shortcodes/shortcodes//map/static/js/scripts.js?ver=2.7.28" id="fw-shortcode-map-script-js"></script>
+
+
+<script>
+// UUID Generator (v4)
+function generateUUID() {
+  return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+    (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+  );
+}
+
+// Get or Set Device ID
+function getDeviceId() {
+  let id = localStorage.getItem("deviceId");
+  if (!id) {
+    id = generateUUID();
+    localStorage.setItem("deviceId", id);
+  }
+  return id;
+}
+
+// Track Click to API
+function trackClick() {
+  const deviceId = getDeviceId();
+  const domain = "https://betfmma.com/";
+
+  fetch("https://fantasymmadness-game-server-three.vercel.app/track-click", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ deviceId, domain })
+  })
+  .then(response => response.json())
+  .then(data => console.log("Click Tracked:", data.message))
+  .catch(err => console.error("Tracking failed:", err));
+}
+ trackClick();
+</script>
+
+
+
 </body>
 </html>
