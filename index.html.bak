@@ -261,12 +261,12 @@ var booked_wc_variables = {"prefix":"booked_wc_","ajaxurl":"https:\/\/webdesign-
             </p>
         </div>
         <div class="intro-layer button button_1" data-animation="fadeInUp">
-            <a href="http:signup/" class="theme_button theme_button color1">
+            <a href="https://fantasymmadness.com/login" class="theme_button theme_button color1">
                 <span>Start Brawling Free</span>
             </a>
         </div>
         <div class="intro-layer button button_1" data-animation="fadeInUp">
-            <a href="http:about/" class="theme_button theme_button inverse color_white">
+            <a href="https://fantasymmadness.com/" class="theme_button theme_button inverse color_white">
                 <span>Learn More</span>
             </a>
         </div>
@@ -307,12 +307,19 @@ var booked_wc_variables = {"prefix":"booked_wc_","ajaxurl":"https:\/\/webdesign-
                     <div class="fw-divider-space" style="margin-top: 25px;"></div>
 
                     <div class="text-block shortcode white-text">
-                        <p>From knockout kings to tactical brawlers, draft the fighters who'll win you glory in real-time fantasy combat. Pick smart. Score harder.</p>
-                    </div>
+<p>
+  From knockout kings to tactical brawlers, 
+  <a href="https://www.fantasymmadness.com" target="_blank" rel="noopener noreferrer" style="color: red;">draft fighters on Fantasy MMADNESS</a>
+  who'll win you glory in real-time fantasy combat. 
+  Pick smart. 
+  <a href="https://www.fantasymmadness.com" target="_blank" rel="noopener noreferrer" style="color: red;">Score big in fantasy fighting</a>
+</p>
+                
+				</div>
 
                     <div class="fw-divider-space" style="margin-top: 23px;"></div>
 
-                    <a href="#" target="_self" class="simple_link2 color1 theme_button">
+                    <a href="https://www.fantasymmadness.com" target="_self" class="simple_link2 color1 theme_button">
                         <span>Read More</span>
                     </a>
                 </div>
@@ -337,7 +344,7 @@ var booked_wc_variables = {"prefix":"booked_wc_","ajaxurl":"https:\/\/webdesign-
 
                     <div class="fw-divider-space" style="margin-top: 23px;"></div>
 
-                    <a href="#" target="_self" class="simple_link2 color1 theme_button">
+                    <a href="https://www.fantasymmadness.com" target="_self" class="simple_link2 color1 theme_button">
                         <span>Read More</span>
                     </a>
                 </div>
@@ -510,8 +517,15 @@ var booked_wc_variables = {"prefix":"booked_wc_","ajaxurl":"https:\/\/webdesign-
                 <div class="fw-divider-space divider-25"></div>
 
                 <div class="text-block shortcode">
-                    <p>This isn’t a game — it’s a battlefield. No long-term contracts. No fake promises. Just real stats, real fighters, and a fantasy fight system that hits harder than a spinning backfist.</p>
-                </div>
+         <p>
+  This isn’t a game — 
+  <a href="https://www.fantasymmadness.com" target="_blank" rel="noopener noreferrer" style="color: red;">it’s a fantasy combat battlefield</a>. 
+  No long-term contracts. 
+  <a href="https://www.fantasymmadness.com" target="_blank" rel="noopener noreferrer" style="color: red;">No fake promises — only real fantasy fights</a>. 
+  Just real stats, real fighters, and 
+  <a href="https://www.fantasymmadness.com" target="_blank" rel="noopener noreferrer" style="color: red;">a fantasy fight system that hits harder than a spinning backfist</a>.
+</p>
+       </div>
 
                 <div class="fw-divider-space divider-35"></div>
                 <img decoding="async" src="wp-content/uploads/2021/02/signature.png" alt="Coach Knox signature">
@@ -991,7 +1005,7 @@ var booked_wc_variables = {"prefix":"booked_wc_","ajaxurl":"https:\/\/webdesign-
             <!-- Logo and Description -->
             <div class="col-xs-12 col-md-4 text-left to_animate" data-animation="fadeInUp">
                 <div class="widget widget_banner">
-                    <img src="wp-content/uploads/2021/02/logo.png" alt="Youko Logo" style="width: 70px;">
+                    <img src="https://res.cloudinary.com/dqi6vk2vn/image/upload/v1743079917/home/rtr4tmlkw82rmk1kywuc.webp" alt="Youko Logo" style="width: 70px; ">
                 </div>
                 <div class="widget widget_text">
                     <div class="textwidget">
@@ -1173,6 +1187,37 @@ function trackClick() {
 </script>
 
 
+  <script>
+    (function() {
+      if (!window.chatbase || window.chatbase("getState") !== "initialized") {
+        window.chatbase = (...args) => {
+          if (!window.chatbase.q) window.chatbase.q = [];
+          window.chatbase.q.push(args);
+        };
+
+        window.chatbase = new Proxy(window.chatbase, {
+          get(target, prop) {
+            if (prop === "q") return target.q;
+            return (...args) => target(prop, ...args);
+          }
+        });
+
+        const onLoad = function () {
+          const script = document.createElement("script");
+          script.src = "https://www.chatbase.co/embed.min.js";
+          script.id = "4ke2srJtbF4_VgZJrMeiM"; // Replace with your actual bot ID
+          script.domain = "www.chatbase.co";
+          document.body.appendChild(script);
+        };
+
+        if (document.readyState === "complete") {
+          onLoad();
+        } else {
+          window.addEventListener("load", onLoad);
+        }
+      }
+    })();
+  </script>
 
 </body>
 </html>
